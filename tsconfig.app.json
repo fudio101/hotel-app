@@ -21,7 +21,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* path config */
+    "baseUrl": "src",
+    "paths": {
+      "@shared/*": ["components/shared/*"],
+      "@images/*": ["assets/images/*"],
+      "@styles/*": ["assets/styles/*"],
+    }
   },
   "include": ["src"]
 }
