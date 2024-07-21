@@ -26,6 +26,7 @@
     /* path config */
     "baseUrl": "src",
     "paths": {
+      "@main/*": ["components/main/*"],
       "@shared/*": ["components/shared/*"],
       "@images/*": ["assets/images/*"],
       "@styles/*": ["assets/styles/*"],

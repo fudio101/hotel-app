@@ -1,10 +1,19 @@
-import { useState } from 'react'
-import reactLogo from '@images/react.svg'
 import viteLogo from '/vite.svg'
 import '@styles/App.css'
+import reactLogo from '@images/react.svg'
+import Toast from "@main/Toast";
+import CancelIcon from '@mui/icons-material/Cancel';
+import { useEffect, useState } from 'react'
+import { toast } from "react-hot-toast";
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (count) {
+      toast(`Count value: ${count}`, {icon: (<CancelIcon />)})
+    }
+  }, [count])
 
   return (
     <>
@@ -28,6 +37,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Toast />
     </>
   )
 }
