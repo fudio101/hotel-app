@@ -1,27 +1,27 @@
-import viteLogo from '/vite.svg'
-import '@styles/App.css'
-import reactLogo from '@images/react.svg'
-import Toast from "@main/Toast";
+import viteLogo from '/vite.svg';
+import '@styles/App.css';
+import reactLogo from '@images/react.svg';
+import Toast from '@main/Toast';
 import CancelIcon from '@mui/icons-material/Cancel';
-import { useEffect, useState } from 'react'
-import { toast } from "react-hot-toast";
+import { useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (count) {
-      toast(`Count value: ${count}`, {icon: (<CancelIcon />)})
+      toast(`Count value: ${count}`, { icon: (<CancelIcon />) });
     }
-  }, [count])
+  }, [count]);
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -39,7 +39,7 @@ function App() {
       </p>
       <Toast />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

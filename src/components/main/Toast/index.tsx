@@ -1,6 +1,6 @@
-import CloseIcon from "@mui/icons-material/Close";
-import { IconButton } from "@mui/material";
-import { toast, ToastBar, Toaster } from "react-hot-toast";
+import CloseIcon from '@mui/icons-material/Close';
+import { IconButton } from '@mui/material';
+import { toast, ToastBar, Toaster } from 'react-hot-toast';
 
 // https://mui.com/material-ui/material-icons/
 function Toast() {
@@ -10,7 +10,7 @@ function Toast() {
     >
       {(t) => (
         <ToastBar toast={t}>
-          {({icon, message}) => (
+          {({ icon, message }) => (
             <>
               {icon}
               {message}
@@ -24,7 +24,7 @@ function Toast() {
         </ToastBar>
       )}
     </Toaster>
-  )
+  );
 }
 
-export default Toast
+export default Toast;
